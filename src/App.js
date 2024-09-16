@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
-import Dashboard from './components/Dashboard'; // Importar o novo componente Dashboard
+import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +17,7 @@ function App() {
 
         {/* Rotas Protegidas */}
         <Route
-          path="/dashboard"
+          path="/dashboard/*"
           element={
             <ProtectedRoute>
               <Dashboard />
