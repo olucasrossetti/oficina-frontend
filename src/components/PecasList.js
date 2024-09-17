@@ -1,4 +1,3 @@
-// src/components/PecasList.js
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -48,9 +47,15 @@ function PecasList() {
       <table className="table">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Quantidade</th>
-            <th>Preço</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Fabricante</th>
+            <th>Fornecedor</th>
+            <th>Setor</th>
+            <th>Data de Entrada</th>
+            <th>Estoque Atual</th>
+            <th>Preço de Tabela (R$)</th>
+            <th>Preço de Venda (R$)</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -58,8 +63,14 @@ function PecasList() {
           {pecas.map((peca) => (
             <tr key={peca._id}>
               <td>{peca.nome}</td>
-              <td>{peca.quantidade}</td>
-              <td>R$ {peca.preco.toFixed(2)}</td>
+              <td>{peca.categoria}</td>
+              <td>{peca.fabricante}</td>
+              <td>{peca.fornecedor}</td>
+              <td>{peca.setor}</td>
+              <td>{new Date(peca.dataEntrada).toLocaleDateString()}</td>
+              <td>{peca.estoqueAtual}</td>
+              <td>R$ {peca.precoTabela.toFixed(2)}</td>
+              <td>R$ {peca.precoVenda.toFixed(2)}</td>
               <td>
                 <button
                   className="btn btn-warning btn-sm mr-2"

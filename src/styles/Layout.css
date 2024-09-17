@@ -1,0 +1,19 @@
+/* src/components/Layout.css */
+
+.container {
+    margin-top: 20px;
+  }
+  
+  .header {
+    background-color: #1976d2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-left: 260px; /* Compensando a barra lateral */
+  }
+  
+  .main-content {
+    margin-left: 260px; /* Compensando a barra lateral */
+    padding: 20px;
+  }
+  

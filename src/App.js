@@ -1,4 +1,4 @@
-// src/App.js
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/global.css';
 
 function App() {
   return (
